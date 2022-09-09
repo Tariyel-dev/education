@@ -1,9 +1,12 @@
 import { applyMiddleware, combineReducers, createStore } from "@reduxjs/toolkit";
+import { AuthReducer } from "./Authreducer";
 import { CourseReducers } from "./CourseReducers";
 const{default:thunk} = require("redux-thunk")
 
 const reducer = combineReducers({
-course: CourseReducers
+course: CourseReducers,
+user: AuthReducer
+
 })
 
 
